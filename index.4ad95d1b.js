@@ -8138,5 +8138,76 @@ function $a6ebff98972dc7c5$var$animateTextTransition(prevIndex, nextIndex) {
 $a6ebff98972dc7c5$var$startTimer();
 
 
+document.addEventListener("DOMContentLoaded", ()=>{
+    // 1. Создаём CSS через JS
+    const style = document.createElement("style");
+    style.textContent = `
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(150px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .animate-on-scroll.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  `;
+    document.head.appendChild(style);
+    // 2. Логика появления при скролле
+    const elements = document.querySelectorAll(".animate-on-scroll");
+    const observer = new IntersectionObserver((entries, obs)=>{
+        entries.forEach((entry)=>{
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                obs.unobserve(entry.target);
+            }
+        });
+    }, {
+        threshold: 0.2
+    });
+    elements.forEach((el)=>observer.observe(el));
+});
+
+
+
+
+
+const $9575daf301ff36c6$var$slider = new (0, $4e95c04dd8a5890d$export$25ce5a424b770e84)('.serial__swiper', {
+    modules: [
+        (0, $3ede398f6665eb67$export$2e2bcd8739ae039),
+        (0, $48396d89743015b3$export$2e2bcd8739ae039)
+    ],
+    navigation: {
+        nextEl: '.serial__swiper-wrapper-next',
+        prevEl: '.serial__swiper-wrapper-prev'
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+    },
+    slidesPerView: 3,
+    spaceBetween: 30,
+    loop: true
+});
+
+
+
+
+
+const $c9cb9c75a83c2c09$var$slider = new (0, $4e95c04dd8a5890d$export$25ce5a424b770e84)('.blog__swiper', {
+    modules: [
+        (0, $3ede398f6665eb67$export$2e2bcd8739ae039),
+        (0, $48396d89743015b3$export$2e2bcd8739ae039)
+    ],
+    pagination: {
+        el: '.blog__swiper-pagination',
+        clickable: true
+    },
+    slidesPerView: 3,
+    spaceBetween: 25,
+    loop: true
+});
+
+
 
 
