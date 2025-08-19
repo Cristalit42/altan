@@ -1395,3 +1395,286 @@ html, body {
 ::-webkit-scrollbar-button {
   display: none;
 }
+
+:root {
+  --bg: #0b0b0e;
+  --panel: #141416;
+  --panel-2: #1a1b1e;
+  --text: #eaeaea;
+  --muted: #9aa0a6;
+  --accent: #e83b3b;
+  --accent-2: #bd2b2b;
+  --shadow: 0 10px 30px #00000080;
+  --radius: 16px;
+}
+
+.app {
+  gap: 16px;
+  height: 100%;
+  padding: 16px;
+  display: flex;
+}
+
+.now {
+  background: #0f0f0f;
+  border-radius: 24px;
+  flex-direction: column;
+  flex: 0 0 360px;
+  padding: 16px 16px 30px;
+  display: flex;
+}
+
+.cover {
+  aspect-ratio: 1;
+  background: #222 center / cover no-repeat;
+  border-radius: 16px;
+  width: 100%;
+  max-height: 300px;
+}
+
+.title {
+  color: #fff;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding: 0 20px;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 100%;
+}
+
+.artist {
+  color: #fff;
+  padding: 0 20px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 153%;
+}
+
+.controls {
+  align-items: center;
+  gap: 30px;
+  margin: 16px auto 10px;
+  padding: 0 20px;
+  display: flex;
+}
+
+.btn-player {
+  width: 42px;
+  height: 42px;
+  color: var(--text);
+  cursor: pointer;
+  border: none;
+  border-radius: 12px;
+  place-items: center;
+  transition: transform 60ms, background .2s;
+  display: grid;
+}
+
+.btn-player:active {
+  transform: translateY(1px);
+}
+
+.btn-player.primary {
+  border-radius: 16px;
+  width: 54px;
+  height: 54px;
+}
+
+.bar {
+  align-items: center;
+  gap: 10px;
+  display: flex;
+}
+
+.time {
+  font-variant-numeric: tabular-nums;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.progress {
+  cursor: pointer;
+  background: #fff;
+  border-radius: 999px;
+  flex: 1;
+  height: 3px;
+  position: relative;
+}
+
+.progress__fill {
+  border-radius: inherit;
+  background-color: #ef0002;
+  width: 0%;
+  position: absolute;
+  inset: 0 auto 0 0;
+  box-shadow: 0 0 14px #ef0002;
+}
+
+.thumb {
+  opacity: 0;
+  background: #ef0002;
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  transition: opacity .15s;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(-50%, -50%);
+}
+
+.progress:hover .thumb {
+  opacity: .9;
+}
+
+.row {
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+  display: flex;
+}
+
+.volume {
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  display: flex;
+}
+
+.range {
+  appearance: none;
+  background: #ffffff14;
+  border-radius: 999px;
+  outline: none;
+  width: 100%;
+  height: 6px;
+}
+
+.range::-webkit-slider-thumb {
+  appearance: none;
+  cursor: pointer;
+  background: #fff;
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+}
+
+.download {
+  margin-left: auto;
+}
+
+.grid {
+  flex: 1;
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  align-content: start;
+  gap: 16px;
+  display: grid;
+}
+
+.card {
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  background: #0f0f0f;
+  border-radius: 15px;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  max-width: 420px;
+  padding: 14px 15px;
+  transition: background .2s, transform 60ms;
+  display: flex;
+  position: relative;
+}
+
+.card:hover {
+  background: #ffffff10;
+}
+
+.card:active {
+  transform: translateY(1px);
+}
+
+.thumb-40 {
+  aspect-ratio: 1;
+  background: #222 center / cover no-repeat;
+  border-radius: 12px;
+  flex: 0 0 56px;
+}
+
+.meta {
+  min-width: 0;
+}
+
+.meta .t {
+  text-align: center;
+  color: #fff;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  overflow: hidden;
+}
+
+.meta .a {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.meta .d {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.card .right {
+  align-items: center;
+  gap: 8px;
+  display: flex;
+  position: absolute;
+  bottom: 2px;
+  right: 6px;
+}
+
+.pill {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.card.active {
+  background: #ffffff12;
+  outline: 2px solid #ffffff24;
+}
+
+.kbd {
+  opacity: .6;
+  color: #c9c9c9;
+  font-size: 12px;
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+}
+
+.kbd b {
+  opacity: .9;
+}
+
+#repeat svg path, #mute svg path {
+  fill: #666;
+  transition: fill .2s;
+}
+
+#repeat.active svg path {
+  fill: #fff;
+}
+
+#mute.muted svg path {
+  fill: gray;
+}
+
+#mute.active svg path {
+  fill: #ef0002;
+  box-shadow: 0 0 14px #ef0002;
+}

@@ -487,7 +487,260 @@
           </div>
           <div class="player__content">
 
-            ТУТ БУДЕТ АУДИО ПЛЕЕР
+            <div class="app" id="app">
+              <section class="now">
+                <div id="cover" class="cover" style="background-image: url(&quot;player-img.27a3d9fb.png&quot;)"></div>
+                <h2 id="title" class="title">—</h2>
+                <p id="artist" class="artist">—</p>
+
+                <div class="controls">
+                  <button class="btn-player" id="repeat" aria-label="Повтор">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" fill="none">
+                      <path fill="#fff" d="M4.727 13.518h7.74a1.7 1.7 0 0 0 1.71-1.692V6.563c0-.31.256-.563.57-.563.315 0 .57.252.57.563v5.263c0 1.557-1.276 2.82-2.85 2.82H4.724l1.309 1.292a.56.56 0 0 1 0 .798.574.574 0 0 1-.806 0l-2.28-2.252a.559.559 0 0 1-.166-.4c0-.176.08-.337.198-.429l2.248-2.227a.574.574 0 0 1 .806 0 .56.56 0 0 1 0 .797l-1.305 1.293ZM3.35 4.12a1.7 1.7 0 0 0-1.71 1.692v5.263a.567.567 0 0 1-.57.563.567.567 0 0 1-.569-.563V5.812c0-1.557 1.276-2.82 2.85-2.82h7.745L9.785 1.7a.56.56 0 0 1 0-.798.574.574 0 0 1 .806 0l2.28 2.25c.109.107.168.253.167.4a.544.544 0 0 1-.21.439L10.592 6.21a.574.574 0 0 1-.806 0 .56.56 0 0 1-.001-.797l1.304-1.293h-7.74Z" opacity=".75"></path>
+                    </svg>
+                  </button>
+                  <button class="btn-player" id="prev" aria-label="Предыдущий трек">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" fill="none">
+                      <path fill="#fff" d="M19.262 19.248c-.217 0-.432-.033-.632-.098s-.383-.16-.536-.28L7.666 10.732a1.315 1.315 0 0 1-.364-.417 1.039 1.039 0 0 1-.128-.495c0-.17.044-.338.128-.494.085-.157.208-.299.364-.418L18.094.767c.23-.18.525-.303.846-.353.32-.05.652-.024.954.074.302.097.56.263.742.475a1.1 1.1 0 0 1 .278.717v16.279c0 .255-.096.505-.278.717a1.63 1.63 0 0 1-.741.476 2.02 2.02 0 0 1-.633.096ZM.708 16.676V2.963c0-.546.278-1.069.772-1.455.495-.385 1.165-.602 1.864-.602.699 0 1.37.217 1.863.602.495.386.772.91.772 1.455v13.715c0 .545-.277 1.068-.772 1.454-.494.386-1.164.603-1.863.603-.7 0-1.37-.217-1.864-.603s-.772-.909-.772-1.454Z" opacity=".75"></path>
+                    </svg>
+                  </button>
+                  <button class="btn-player primary" id="play" aria-label="Воспроизвести / Пауза">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="30" fill="none">
+                      <path fill="#fff" d="M25.317 13.07c1.347.777 1.347 2.721 0 3.499l-21.72 12.54c-1.348.778-3.031-.194-3.031-1.75V2.28C.566.722 2.249-.25 3.596.528l21.721 12.54Z"></path>
+                    </svg>
+                  </button>
+                  <button class="btn-player" id="next" aria-label="Следующий трек">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" fill="none">
+                      <path fill="#fff" d="M2.39 19.248c.218 0 .433-.033.633-.098s.383-.16.536-.28l10.428-8.139c.155-.118.28-.26.364-.417a1.04 1.04 0 0 0 .128-.495c0-.17-.044-.338-.128-.494a1.316 1.316 0 0 0-.364-.418L3.559.767a1.834 1.834 0 0 0-.846-.353 2.086 2.086 0 0 0-.954.074 1.63 1.63 0 0 0-.742.475 1.1 1.1 0 0 0-.278.717v16.279c0 .255.096.505.278.717.181.213.44.378.741.476.2.065.416.097.633.096Zm18.555-2.572V2.963c0-.546-.278-1.069-.772-1.455-.495-.385-1.165-.602-1.864-.602-.699 0-1.37.217-1.864.602-.494.386-.771.91-.771 1.455v13.715c0 .545.277 1.068.771 1.454.495.386 1.165.603 1.864.603.7 0 1.37-.217 1.864-.603s.772-.909.772-1.454Z" opacity=".75"></path>
+                    </svg>
+                  </button>
+                  <button class="btn-player active" id="mute" aria-label="Звук выкл / вкл">
+<svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" fill="none"><path fill="#EF0002" d="M10.364.559 5.361 3.232a1.254 1.254 0 0 1-.591.148H1.587A1.253 1.253 0 0 0 .336 4.628v6.383a1.247 1.247 0 0 0 1.251 1.248H4.77c.206 0 .41.05.59.148l5.004 2.673a1.254 1.254 0 0 0 1.68-.485c.107-.187.163-.4.163-.615V1.659a1.245 1.245 0 0 0-.609-1.071 1.254 1.254 0 0 0-1.234-.03Zm5.155 4.144a.494.494 0 0 0-.812.563 4.459 4.459 0 0 1 0 5.107.491.491 0 0 0 .301.763.495.495 0 0 0 .511-.2 5.442 5.442 0 0 0 0-6.233Z"></path></svg>
+                  </button>
+                </div>
+
+                <div class="bar">
+                  <span id="current" class="time">00:00</span>
+                  <div id="progress" class="progress" role="slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                    <div class="progress__fill" id="progressFill"></div>
+                    <div class="thumb" id="thumb"></div>
+                  </div>
+                  <span id="duration" class="time">00:00</span>
+                </div>
+                <!-- 
+                <div class="row">
+                  <div class="volume" style="max-width: 220px">
+                    <span id="volIcon">🔊</span>
+                    <input id="volume" class="range" type="range" min="0" max="1" step="0.01" value="0.8"
+                      aria-label="Громкость" />
+                  </div>
+                  <a id="download" class="btn download" href="#" download aria-label="Скачать трек">⬇️</a>
+                </div> -->
+              </section>
+
+              <section class="grid" id="grid"></section>
+            </div>
+
+
+            <!-- Аудио-элемент -->
+            <audio id="audio" preload="metadata"></audio>
+
+
+            <script>// ===== ДАННЫЕ ПЛЕЙЛИСТА =====
+// Замените пути src/cover на свои файлы. Можно хранить в /assets/audio и /assets/covers
+const tracks = [
+    {
+        title: "\u0414\u044C\u0443\u043B\u0443\u0443\u0440",
+        artist: 'KitJah',
+        src: './music.5614bf84.mp3',
+        cover: './player-img.4e7373af.png'
+    }
+];
+// ===== ССЫЛКИ НА DOM =====
+const grid = document.getElementById('grid');
+const audio = document.getElementById('audio');
+const cover = document.getElementById('cover');
+const titleEl = document.getElementById('title');
+const artistEl = document.getElementById('artist');
+const playBtn = document.getElementById('play');
+const prevBtn = document.getElementById('prev');
+const nextBtn = document.getElementById('next');
+const muteBtn = document.getElementById('mute');
+const volume = document.getElementById('volume');
+const currentEl = document.getElementById('current');
+const durationEl = document.getElementById('duration');
+const progress = document.getElementById('progress');
+const progressFill = document.getElementById('progressFill');
+const thumb = document.getElementById('thumb');
+const downloadBtn = document.getElementById('download');
+const volIcon = document.getElementById('volIcon');
+let index = 0;
+let dragging = false;
+// ===== РЕНДЕР ПЛЕЙЛИСТА =====
+function renderList() {
+    grid.innerHTML = tracks.map((t, i)=>`
+      <article class="card" data-idx="${i}">
+        <div class="thumb-40" style="background-image:url('${t.cover || ''}')"></div>
+        <div class="meta">
+          <div class="t">${t.title}</div>
+          <div class="a">${t.artist}</div>
+        </div>
+        <div class="right">
+          <span class="pill d" id="dur-${i}">--:--</span>
+          <a class="btn-player" href="${t.src}" download title="\u{421}\u{43A}\u{430}\u{447}\u{430}\u{442}\u{44C}"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none"><path fill="#fff" fill-opacity=".4" d="M18.888 2.333H9.112c-4.247 0-6.779 2.532-6.779 6.779v9.765c0 4.258 2.532 6.79 6.779 6.79h9.765c4.246 0 6.778-2.532 6.778-6.779V9.113c.012-4.247-2.52-6.779-6.767-6.779ZM9.882 12.81a.88.88 0 0 1 1.236 0l2.007 2.007V7.595c0-.478.397-.875.875-.875s.875.397.875.875v7.222l2.007-2.007a.88.88 0 0 1 1.236 0 .88.88 0 0 1 0 1.237l-3.5 3.5a.906.906 0 0 1-.618.256.879.879 0 0 1-.618-.256l-3.5-3.5a.88.88 0 0 1 0-1.237Zm11.398 7.28A23.037 23.037 0 0 1 14 21.268c-2.473 0-4.935-.396-7.28-1.178a.879.879 0 0 1-.548-1.108.865.865 0 0 1 1.108-.549 21.388 21.388 0 0 0 13.452 0 .879.879 0 0 1 1.108.549.89.89 0 0 1-.56 1.108Z"/></svg></a>
+        </div>
+      </article>`).join('');
+    grid.querySelectorAll('.card').forEach((card)=>{
+        card.addEventListener('click', ()=>{
+            const i = +card.dataset.idx;
+            if (i === index && !audio.paused) audio.currentTime = 0;
+            else loadTrack(i, true);
+        });
+    });
+}
+// ===== ЗАГРУЗКА ТРЕКА =====
+function loadTrack(i, autoplay = false) {
+    index = (i + tracks.length) % tracks.length;
+    const t = tracks[index];
+    audio.src = t.src;
+    audio.load();
+    titleEl.textContent = t.title;
+    artistEl.textContent = t.artist;
+    cover.style.backgroundImage = `url('${t.cover || ''}')`;
+    downloadBtn.href = t.src;
+    downloadBtn.download = `${t.title}.mp3`;
+    highlightActive();
+    if (autoplay) audio.play();
+    localStorage.setItem('player:index', index);
+}
+function highlightActive() {
+    grid.querySelectorAll('.card').forEach((el, i)=>{
+        el.classList.toggle('active', i === index);
+    });
+}
+// ===== ПЛЕЙ/ПАУЗА =====
+function toggle() {
+    audio.paused ? audio.play() : audio.pause();
+}
+playBtn.addEventListener('click', toggle);
+prevBtn.addEventListener('click', ()=>loadTrack(index - 1, true));
+nextBtn.addEventListener('click', ()=>loadTrack(index + 1, true));
+muteBtn.addEventListener('click', ()=>audio.muted = !audio.muted);
+audio.addEventListener('play', ()=>playBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="37" height="37" fill="none"><path fill="#fff" d="M21 12h3v14h-3V12ZM13 12h3v14h-3V12Z"/></svg>');
+audio.addEventListener('pause', ()=>playBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="27" height="30" fill="none"><path fill="#fff" d="M25.317 13.07c1.347.777 1.347 2.721 0 3.499l-21.72 12.54c-1.348.778-3.031-.194-3.031-1.75V2.28C.566.722 2.249-.25 3.596.528l21.721 12.54Z"/></svg>');
+audio.addEventListener('ended', ()=>loadTrack(index + 1, true));
+const repeatBtn = document.getElementById('repeat');
+let isRepeat = false;
+let isMuted = false;
+// repeat toggle
+repeatBtn.addEventListener('click', ()=>{
+    isRepeat = !isRepeat;
+    audio.loop = isRepeat;
+    repeatBtn.classList.toggle('active', isRepeat);
+});
+// mute toggle
+muteBtn.addEventListener('click', ()=>{
+    isMuted = !isMuted;
+    audio.muted = isMuted;
+    muteBtn.classList.remove('active', 'muted');
+    if (isMuted) muteBtn.classList.add('muted');
+    else muteBtn.classList.add('active');
+});
+// ===== ГРОМКОСТЬ =====
+// volume.addEventListener('input', () => { audio.volume = +volume.value; updateVolIcon(); });
+// function updateVolIcon() {
+//   const v = audio.muted ? 0 : audio.volume;
+//   volIcon.textContent = v === 0 ? '🔇' : v < .5 ? '🔈' : '🔊';
+// }
+// audio.addEventListener('volumechange', updateVolIcon);
+// ===== ПРОГРЕСС =====
+function format(t) {
+    t = isFinite(t) ? t : 0;
+    const m = Math.floor(t / 60);
+    const s = Math.floor(t % 60);
+    return `${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
+}
+audio.addEventListener('timeupdate', ()=>{
+    if (!dragging) {
+        const pct = audio.currentTime / (audio.duration || 1) * 100;
+        progressFill.style.width = pct + '%';
+        thumb.style.left = pct + '%';
+        currentEl.textContent = format(audio.currentTime);
+    }
+});
+audio.addEventListener('loadedmetadata', ()=>{
+    durationEl.textContent = format(audio.duration);
+    const i = index; // запомнили карточку
+    const badge = document.getElementById(`dur-${i}`);
+    if (badge) badge.textContent = format(audio.duration);
+});
+function seek(clientX) {
+    const rect = progress.getBoundingClientRect();
+    const x = Math.max(0, Math.min(clientX - rect.left, rect.width));
+    const pct = x / rect.width;
+    audio.currentTime = pct * (audio.duration || 0);
+}
+progress.addEventListener('pointerdown', (e)=>{
+    dragging = true;
+    progress.setPointerCapture(e.pointerId);
+    seek(e.clientX);
+});
+progress.addEventListener('pointermove', (e)=>{
+    if (dragging) seek(e.clientX);
+});
+progress.addEventListener('pointerup', (e)=>{
+    dragging = false;
+});
+progress.addEventListener('pointercancel', ()=>dragging = false);
+// ===== КЛАВИАТУРА =====
+window.addEventListener('keydown', (e)=>{
+    if ([
+        'Space',
+        'ArrowLeft',
+        'ArrowRight',
+        'ArrowUp',
+        'ArrowDown'
+    ].includes(e.code)) e.preventDefault();
+    if (e.code === 'Space') toggle();
+    if (e.code === 'ArrowLeft') audio.currentTime = Math.max(0, audio.currentTime - 5);
+    if (e.code === 'ArrowRight') audio.currentTime = Math.min(audio.duration || 0, audio.currentTime + 5);
+    if (e.code === 'ArrowUp') volume.value = Math.min(1, parseFloat(volume.value) + 0.05).toFixed(2), audio.volume = +volume.value;
+    if (e.code === 'ArrowDown') volume.value = Math.max(0, parseFloat(volume.value) - 0.05).toFixed(2), audio.volume = +volume.value;
+});
+// ===== ИНИЦИАЛИЗАЦИЯ =====
+renderList();
+const saved = +localStorage.getItem('player:index');
+loadTrack(Number.isFinite(saved) ? saved : 0, false);
+audio.volume = +volume.value;
+updateVolIcon();
+// Предзагрузка длительностей (по желанию — можно закомментировать)
+// аккуратно: создаём лёгкие невидимые audio для получения metadata
+tracks.forEach((t, i)=>{
+    const a = new Audio();
+    a.preload = 'metadata';
+    a.src = t.src;
+    a.addEventListener('loadedmetadata', ()=>{
+        const el = document.getElementById('dur-' + i);
+        if (el) el.textContent = format(a.duration);
+    });
+    const audio = new Audio();
+    let isRepeat = false;
+    const repeatBtn = document.getElementById('repeat');
+    // переключатель повтора
+    repeatBtn.addEventListener('click', ()=>{
+        isRepeat = !isRepeat;
+        audio.loop = isRepeat; // встроенный параметр <audio>
+        // визуальная подсветка кнопки
+        repeatBtn.classList.toggle('active', isRepeat);
+    });
+    // пример: если хочешь автопереход к следующему треку без repeat
+    audio.addEventListener('ended', ()=>{
+        isRepeat;
+    });
+});
+
+</script>
+
 
           </div>
         </div>
@@ -760,13 +1013,6 @@
                     <input type="tel" placeholder="+7 (___)  ___-__-__">
                   </label>
                 </div>
-                <button class="btn btn--white" type="submit">
-                  Отправить
-                  <svg xmlns="http://www.w3.org/2000/svg" width="51" height="51" fill="none" viewbox="0 0 51 51">
-                    <circle cx="25.5" cy="25.5" r="25.5" fill="#EF0002"></circle>
-                    <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.429" d="M23.071 20.643 27.93 25.5l-4.858 4.857"></path>
-                  </svg>
-                </button>
                 <label class="custom-checkbox">
                   <input type="checkbox">
                   <div>
@@ -774,6 +1020,13 @@
                     данных” на условиях и для целей, определенных <a href="#">Политикой Конфиденциальности.</a>
                   </div>
                 </label>
+                <button class="btn btn--white" type="submit">
+                  Отправить
+                  <svg xmlns="http://www.w3.org/2000/svg" width="51" height="51" fill="none" viewbox="0 0 51 51">
+                    <circle cx="25.5" cy="25.5" r="25.5" fill="#EF0002"></circle>
+                    <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.429" d="M23.071 20.643 27.93 25.5l-4.858 4.857"></path>
+                  </svg>
+                </button>
               </form>
             </div>
             <img class="contacts-img" src="Узоры.6f9a85fd.png" alt="img">
