@@ -8028,7 +8028,7 @@ const $a6ebff98972dc7c5$var$slider = new (0, $4e95c04dd8a5890d$export$25ce5a424b
     },
     slidesPerView: 1,
     loop: true,
-    allowTouchMove: true,
+    allowTouchMove: false,
     speed: 2000
 });
 const $a6ebff98972dc7c5$var$progressBars = document.querySelectorAll('.pagination-item .progress');
@@ -8182,8 +8182,22 @@ const $9575daf301ff36c6$var$slider = new (0, $4e95c04dd8a5890d$export$25ce5a424b
         prevEl: '.serial__swiper-wrapper-prev'
     },
     pagination: {
-        el: '.swiper-pagination',
-        clickable: true
+        el: '.serial__swiper-pagination',
+        type: 'progressbar'
+    },
+    breakpoints: {
+        1100: {
+            slidesPerView: 3,
+            spaceBetween: 30
+        },
+        700: {
+            slidesPerView: 2,
+            spaceBetween: 20
+        },
+        0: {
+            slidesPerView: 2,
+            spaceBetween: 10
+        }
     },
     slidesPerView: 3,
     spaceBetween: 30,
@@ -8201,7 +8215,21 @@ const $c9cb9c75a83c2c09$var$slider = new (0, $4e95c04dd8a5890d$export$25ce5a424b
     ],
     pagination: {
         el: '.blog__swiper-pagination',
-        clickable: true
+        type: 'progressbar'
+    },
+    breakpoints: {
+        1100: {
+            slidesPerView: 3,
+            spaceBetween: 30
+        },
+        700: {
+            slidesPerView: 2,
+            spaceBetween: 20
+        },
+        0: {
+            slidesPerView: 2,
+            spaceBetween: 10
+        }
     },
     slidesPerView: 3,
     spaceBetween: 25,
