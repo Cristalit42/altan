@@ -8239,3 +8239,54 @@ const $c9cb9c75a83c2c09$var$slider = new (0, $4e95c04dd8a5890d$export$25ce5a424b
 
 
 
+
+const $f16a859cb452021a$var$slider = new (0, $4e95c04dd8a5890d$export$25ce5a424b770e84)('.template-block__swiper', {
+    modules: [
+        (0, $3ede398f6665eb67$export$2e2bcd8739ae039),
+        (0, $48396d89743015b3$export$2e2bcd8739ae039)
+    ],
+    navigation: {
+        nextEl: '.template-block__swiper-wrapper-next',
+        prevEl: '.template-block__swiper-wrapper-prev'
+    },
+    pagination: {
+        el: '.template-block__swiper-pagination',
+        clickable: true
+    },
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true
+});
+const $f16a859cb452021a$var$audio = document.getElementById("audio");
+const $f16a859cb452021a$var$playPauseBtn = document.getElementById("playPauseBtn");
+const $f16a859cb452021a$var$time = document.getElementById("time");
+const $f16a859cb452021a$var$pauseIcon = `
+<svg width="88" height="89" viewBox="0 0 88 89" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0 10C0 4.47715 4.47715 0 10 0H78C83.5228 0 88 4.47715 88 10V79C88 84.5228 83.5228 89 78 89H10C4.47715 89 0 84.5228 0 79V10Z" fill="white" />
+  <path d="M38 34H42V55H38V34Z" fill="black" />
+  <path d="M47 34H51V55H47V34Z" fill="black" />
+</svg>
+`;
+const $f16a859cb452021a$var$playIcon = `
+<svg width="88" height="89" viewBox="0 0 88 89" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0 10C0 4.47715 4.47715 0 10 0H78C83.5229 0 88 4.47715 88 10V79C88 84.5229 83.5229 89 78 89H10C4.47715 89 0 84.5229 0 79V10Z" fill="white" />
+  <path d="M34 52.1404V36.8607C34 35.6008 34 34.9701 34.2668 34.5973C34.4997 34.272 34.8586 34.0583 35.2571 34.0073C35.7135 33.9488 36.2732 34.2454 37.3911 34.8379L51.806 42.4778L51.8112 42.4801C53.0466 43.1349 53.6647 43.4624 53.8674 43.899C54.0442 44.2798 54.0442 44.7194 53.8674 45.1003C53.6644 45.5374 53.0449 45.8663 51.806 46.5229L37.3911 54.1628C36.2724 54.7557 35.7136 55.0512 35.2571 54.9927C34.8586 54.9416 34.4997 54.7281 34.2668 54.4027C34 54.0299 34 53.4004 34 52.1404Z" fill="black" />
+</svg>
+`;
+$f16a859cb452021a$var$playPauseBtn.innerHTML = $f16a859cb452021a$var$playIcon; // по умолчанию — "play"
+$f16a859cb452021a$var$playPauseBtn.addEventListener("click", ()=>{
+    if ($f16a859cb452021a$var$audio.paused) {
+        $f16a859cb452021a$var$audio.play();
+        $f16a859cb452021a$var$playPauseBtn.innerHTML = $f16a859cb452021a$var$pauseIcon;
+    } else {
+        $f16a859cb452021a$var$audio.pause();
+        $f16a859cb452021a$var$playPauseBtn.innerHTML = $f16a859cb452021a$var$playIcon;
+    }
+});
+$f16a859cb452021a$var$audio.addEventListener("timeupdate", ()=>{
+    const minutes = Math.floor($f16a859cb452021a$var$audio.currentTime / 60);
+    const seconds = Math.floor($f16a859cb452021a$var$audio.currentTime % 60).toString().padStart(2, "0");
+    $f16a859cb452021a$var$time.textContent = `${minutes}:${seconds}`;
+});
+
+
